@@ -2,7 +2,7 @@
     counter-reset: achievements 1;
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
+    width: 100%;
 }
 .achievements-board_achievement {
     height: 102px;
@@ -23,6 +23,9 @@
 .achievements-board_achievement:first-child .achievements-board_achievement_image-holder:after {
     display: none;
 }
+.achievements-board_achievement:nth-child(n+101){
+    display: none;
+}
 .achievements-board_achievement_image-holder {
     position: relative;
     top: 15px;
@@ -38,6 +41,8 @@
 .achievements-board_achievement_image-holder:after {
     counter-increment: achievements;
     content: counter(achievements);
+    font-family: Arial;
+    font-weight: bold;
     font-size: 15px;
     color: #89b8cf;
     text-align: center;
@@ -47,6 +52,7 @@
     width: 20px;
     display: block;
 }
+
 
 
 
